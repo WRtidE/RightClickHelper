@@ -1,0 +1,2 @@
+// Configure a local Apple Development team with scripts/configure-signing.sh.
+#include? "Local.xcconfig"

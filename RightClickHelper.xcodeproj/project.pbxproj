@@ -1,0 +1,704 @@
+// !$*UTF8*$!
+{
+	archiveVersion = "1";
+	classes = {
+	};
+	objectVersion = "56";
+	objects = {
+		6280E40656CCF01BD4D28240 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text.xcconfig";
+			path = "Config/Project.xcconfig";
+			sourceTree = "<group>";
+		};
+		681C948D238C526E9E3424E0 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.application";
+			path = "RightClickHelper.app";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		DC176E8AF1DD34CEAAE8410B = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.app-extension";
+			path = "FinderExtension.appex";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		0A3E27B8CA818264D75C8D81 = {
+			isa = "PBXGroup";
+			name = "Products";
+			children = (
+				"681C948D238C526E9E3424E0",
+				"DC176E8AF1DD34CEAAE8410B",
+			);
+			sourceTree = "<group>";
+		};
+		6C8074905A8083E30E4D42C1 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "App/ActionDialog.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		CF093F1C7D0CBA5C54FFF8E0 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "App/AppState.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		C62C7D79827B8A2648810090 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "App/ClipboardController.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F236A44BF4825B0D3AE02D77 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "App/ClipboardViews.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		DF64EB45F6C09C49C3382E19 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "App/LeftShiftMonitor.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		2CC473744C2B663076F48C90 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "App/LoginItemController.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		E9F65604428AED374199F2F5 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "App/ProductState.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		1CB3C43648425279F6BCE5B6 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "App/ProductViews.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		42F03B51957B6894AEAB9C5F = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "App/RightClickHelperApp.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		B2692BA15AD618F1DC3C6C86 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "App/ServicesProvider.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		D48AB647DDC7FE8969F6317C = {
+			isa = "PBXGroup";
+			name = "App";
+			children = (
+				"6C8074905A8083E30E4D42C1",
+				"CF093F1C7D0CBA5C54FFF8E0",
+				"C62C7D79827B8A2648810090",
+				"F236A44BF4825B0D3AE02D77",
+				"DF64EB45F6C09C49C3382E19",
+				"2CC473744C2B663076F48C90",
+				"E9F65604428AED374199F2F5",
+				"1CB3C43648425279F6BCE5B6",
+				"42F03B51957B6894AEAB9C5F",
+				"B2692BA15AD618F1DC3C6C86",
+			);
+			sourceTree = "<group>";
+		};
+		D1D848FC9796C428F76D3602 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "FinderExtension/FinderSync.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		C39CD85AF3A6E823A6860814 = {
+			isa = "PBXGroup";
+			name = "FinderExtension";
+			children = (
+				"D1D848FC9796C428F76D3602",
+			);
+			sourceTree = "<group>";
+		};
+		F5C411ED99C0769151E0EAA3 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Shared/ActionContext.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		06BF0029FB042F4EB6F0DF03 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Shared/ClipboardHistory.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		25B48D85119A43605CDB1DAE = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Shared/FileCreator.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		4219A3EEC2B150050A1C56BF = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Shared/LaunchPresentation.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		E88A20D8961A9FC392DC7CA5 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Shared/MenuPreferences.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		C75EED9DB61C7E8D49ACE058 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Shared/Models.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		45F795B6D16ACFBE76FF238C = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Shared/RequestInbox.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		D1A816F94668A9229103606C = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Shared/RequestTrace.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		DBECCFA01C8FAD640DC822FA = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Shared/ServicePasteboard.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F4454F2C321585CAB5A59334 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Shared/SetupGuide.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		9513145D0AE07BC037FD494D = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "Shared/SharedStore.swift";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F267DDABAAD63189B22B48F7 = {
+			isa = "PBXGroup";
+			name = "Shared";
+			children = (
+				"F5C411ED99C0769151E0EAA3",
+				"06BF0029FB042F4EB6F0DF03",
+				"25B48D85119A43605CDB1DAE",
+				"4219A3EEC2B150050A1C56BF",
+				"E88A20D8961A9FC392DC7CA5",
+				"C75EED9DB61C7E8D49ACE058",
+				"45F795B6D16ACFBE76FF238C",
+				"D1A816F94668A9229103606C",
+				"DBECCFA01C8FAD640DC822FA",
+				"F4454F2C321585CAB5A59334",
+				"9513145D0AE07BC037FD494D",
+			);
+			sourceTree = "<group>";
+		};
+		E88CD42DB02F67BB82214719 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "file";
+			path = "Shared/Resources/blank.docx";
+			sourceTree = "SOURCE_ROOT";
+		};
+		8FAA48BC59C6F8F151C616F4 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "file";
+			path = "Shared/Resources/blank.pptx";
+			sourceTree = "SOURCE_ROOT";
+		};
+		A337CF8E43190705542848DE = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "file";
+			path = "Shared/Resources/blank.xlsx";
+			sourceTree = "SOURCE_ROOT";
+		};
+		39B094970D276CB11C8BF4CD = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "text";
+			path = "ThirdPartyNotices.txt";
+			sourceTree = "SOURCE_ROOT";
+		};
+		C5E55183ECB076EB335DF6EE = {
+			isa = "PBXGroup";
+			name = "Resources";
+			children = (
+				"E88CD42DB02F67BB82214719",
+				"8FAA48BC59C6F8F151C616F4",
+				"A337CF8E43190705542848DE",
+				"39B094970D276CB11C8BF4CD",
+			);
+			sourceTree = "<group>";
+		};
+		19F479106CE8C3BA8C106518 = {
+			isa = "PBXGroup";
+			children = (
+				"D48AB647DDC7FE8969F6317C",
+				"C39CD85AF3A6E823A6860814",
+				"F267DDABAAD63189B22B48F7",
+				"C5E55183ECB076EB335DF6EE",
+				"6280E40656CCF01BD4D28240",
+				"0A3E27B8CA818264D75C8D81",
+			);
+			sourceTree = "<group>";
+		};
+		2423A1AB2990E62A246FEFB9 = {
+			isa = "PBXBuildFile";
+			fileRef = "E88CD42DB02F67BB82214719";
+		};
+		2D3134283BF47795686D7FAD = {
+			isa = "PBXBuildFile";
+			fileRef = "8FAA48BC59C6F8F151C616F4";
+		};
+		7A97A4A7A252D6805EA19CA1 = {
+			isa = "PBXBuildFile";
+			fileRef = "A337CF8E43190705542848DE";
+		};
+		C93051F88CAFAAF6477266C5 = {
+			isa = "PBXBuildFile";
+			fileRef = "39B094970D276CB11C8BF4CD";
+		};
+		F9187E824FE171A6F0EFAE28 = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = "2147483647";
+			files = (
+				"2423A1AB2990E62A246FEFB9",
+				"2D3134283BF47795686D7FAD",
+				"7A97A4A7A252D6805EA19CA1",
+				"C93051F88CAFAAF6477266C5",
+			);
+			runOnlyForDeploymentPostprocessing = "0";
+		};
+		E86F2AF7E837C7CFEB7216E6 = {
+			isa = "XCBuildConfiguration";
+			baseConfigurationReference = "6280E40656CCF01BD4D28240";
+			buildSettings = {
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SWIFT_VERSION = "5.0";
+				CLANG_ENABLE_MODULES = "YES";
+				CODE_SIGN_STYLE = "Manual";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				ENABLE_HARDENED_RUNTIME = "YES";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = "NO";
+				GENERATE_INFOPLIST_FILE = "NO";
+				CURRENT_PROJECT_VERSION = "18";
+				MARKETING_VERSION = "0.6.0";
+				PRODUCT_NAME = "FinderExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.rightclickhelper.prototype.FinderExtension";
+				INFOPLIST_FILE = "Config/Extension-Info.plist";
+				CODE_SIGN_ENTITLEMENTS = "Config/Extension.entitlements";
+				APPLICATION_EXTENSION_API_ONLY = "YES";
+				SKIP_INSTALL = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+			};
+			name = "Debug";
+		};
+		13729D2EB40827337DD26FD4 = {
+			isa = "XCBuildConfiguration";
+			baseConfigurationReference = "6280E40656CCF01BD4D28240";
+			buildSettings = {
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SWIFT_VERSION = "5.0";
+				CLANG_ENABLE_MODULES = "YES";
+				CODE_SIGN_STYLE = "Manual";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				ENABLE_HARDENED_RUNTIME = "YES";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = "NO";
+				GENERATE_INFOPLIST_FILE = "NO";
+				CURRENT_PROJECT_VERSION = "18";
+				MARKETING_VERSION = "0.6.0";
+				PRODUCT_NAME = "FinderExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.rightclickhelper.prototype.FinderExtension";
+				INFOPLIST_FILE = "Config/Extension-Info.plist";
+				CODE_SIGN_ENTITLEMENTS = "Config/Extension.entitlements";
+				APPLICATION_EXTENSION_API_ONLY = "YES";
+				SKIP_INSTALL = "YES";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		E882A69ECB800DAC3FF83EB0 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"E86F2AF7E837C7CFEB7216E6",
+				"13729D2EB40827337DD26FD4",
+			);
+			defaultConfigurationIsVisible = "0";
+			defaultConfigurationName = "Debug";
+		};
+		ACA451E129D40B36BFF0A922 = {
+			isa = "PBXBuildFile";
+			fileRef = "D1D848FC9796C428F76D3602";
+		};
+		378D66F1AF103A8818E3F690 = {
+			isa = "PBXBuildFile";
+			fileRef = "F5C411ED99C0769151E0EAA3";
+		};
+		22E5F171C75B3FE5D6D9AD13 = {
+			isa = "PBXBuildFile";
+			fileRef = "06BF0029FB042F4EB6F0DF03";
+		};
+		6FB568DC6009F6D2AFBD062F = {
+			isa = "PBXBuildFile";
+			fileRef = "25B48D85119A43605CDB1DAE";
+		};
+		F180680F768A9CAD2797C14C = {
+			isa = "PBXBuildFile";
+			fileRef = "4219A3EEC2B150050A1C56BF";
+		};
+		FC158C8819667BA6174B32CB = {
+			isa = "PBXBuildFile";
+			fileRef = "E88A20D8961A9FC392DC7CA5";
+		};
+		316EB8100825052C1B93A62E = {
+			isa = "PBXBuildFile";
+			fileRef = "C75EED9DB61C7E8D49ACE058";
+		};
+		BFD5F0ED62A8FC85372D7646 = {
+			isa = "PBXBuildFile";
+			fileRef = "45F795B6D16ACFBE76FF238C";
+		};
+		8094795E6A387EBCE9DAAC9D = {
+			isa = "PBXBuildFile";
+			fileRef = "D1A816F94668A9229103606C";
+		};
+		7F0D45448053C2329CCBCDDA = {
+			isa = "PBXBuildFile";
+			fileRef = "DBECCFA01C8FAD640DC822FA";
+		};
+		6F2485F0A3FBF2FA92800428 = {
+			isa = "PBXBuildFile";
+			fileRef = "F4454F2C321585CAB5A59334";
+		};
+		BC60B768B627FDD43AE74D4E = {
+			isa = "PBXBuildFile";
+			fileRef = "9513145D0AE07BC037FD494D";
+		};
+		E6E95F72F402CCC4435DF60D = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = "2147483647";
+			files = (
+				"ACA451E129D40B36BFF0A922",
+				"378D66F1AF103A8818E3F690",
+				"22E5F171C75B3FE5D6D9AD13",
+				"6FB568DC6009F6D2AFBD062F",
+				"F180680F768A9CAD2797C14C",
+				"FC158C8819667BA6174B32CB",
+				"316EB8100825052C1B93A62E",
+				"BFD5F0ED62A8FC85372D7646",
+				"8094795E6A387EBCE9DAAC9D",
+				"7F0D45448053C2329CCBCDDA",
+				"6F2485F0A3FBF2FA92800428",
+				"BC60B768B627FDD43AE74D4E",
+			);
+			runOnlyForDeploymentPostprocessing = "0";
+		};
+		A148AD5E0608DCE6158BFF07 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "E882A69ECB800DAC3FF83EB0";
+			buildPhases = (
+				"E6E95F72F402CCC4435DF60D",
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinderExtension";
+			productName = "FinderExtension";
+			productReference = "DC176E8AF1DD34CEAAE8410B";
+			productType = "com.apple.product-type.app-extension";
+		};
+		EBB30C28FB56077190499346 = {
+			isa = "PBXContainerItemProxy";
+			containerPortal = "244210E48437B6556980A702";
+			proxyType = "1";
+			remoteGlobalIDString = "A148AD5E0608DCE6158BFF07";
+			remoteInfo = "FinderExtension";
+		};
+		965FF32F58B180754D654307 = {
+			isa = "PBXTargetDependency";
+			target = "A148AD5E0608DCE6158BFF07";
+			targetProxy = "EBB30C28FB56077190499346";
+		};
+		825B86C761149A6ECD80A528 = {
+			isa = "PBXBuildFile";
+			fileRef = "DC176E8AF1DD34CEAAE8410B";
+			settings = {
+				ATTRIBUTES = (
+					"RemoveHeadersOnCopy",
+				);
+			};
+		};
+		6B3E090DB545F4D7E323DB6E = {
+			isa = "PBXCopyFilesBuildPhase";
+			buildActionMask = "2147483647";
+			dstPath = "";
+			dstSubfolderSpec = "13";
+			files = (
+				"825B86C761149A6ECD80A528",
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = "0";
+		};
+		B00CCDD09424E369308D67FA = {
+			isa = "XCBuildConfiguration";
+			baseConfigurationReference = "6280E40656CCF01BD4D28240";
+			buildSettings = {
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SWIFT_VERSION = "5.0";
+				CLANG_ENABLE_MODULES = "YES";
+				CODE_SIGN_STYLE = "Manual";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				ENABLE_HARDENED_RUNTIME = "YES";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = "NO";
+				GENERATE_INFOPLIST_FILE = "NO";
+				CURRENT_PROJECT_VERSION = "18";
+				MARKETING_VERSION = "0.6.0";
+				PRODUCT_NAME = "RightClickHelper";
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.rightclickhelper.prototype";
+				INFOPLIST_FILE = "Config/App-Info.plist";
+				CODE_SIGN_ENTITLEMENTS = "Config/App.entitlements";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				COMBINE_HIDPI_IMAGES = "YES";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+			};
+			name = "Debug";
+		};
+		1B104479E55E37CF8A63CBDF = {
+			isa = "XCBuildConfiguration";
+			baseConfigurationReference = "6280E40656CCF01BD4D28240";
+			buildSettings = {
+				SDKROOT = "macosx";
+				MACOSX_DEPLOYMENT_TARGET = "14.0";
+				SWIFT_VERSION = "5.0";
+				CLANG_ENABLE_MODULES = "YES";
+				CODE_SIGN_STYLE = "Manual";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				ENABLE_HARDENED_RUNTIME = "YES";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = "NO";
+				GENERATE_INFOPLIST_FILE = "NO";
+				CURRENT_PROJECT_VERSION = "18";
+				MARKETING_VERSION = "0.6.0";
+				PRODUCT_NAME = "RightClickHelper";
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.rightclickhelper.prototype";
+				INFOPLIST_FILE = "Config/App-Info.plist";
+				CODE_SIGN_ENTITLEMENTS = "Config/App.entitlements";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				COMBINE_HIDPI_IMAGES = "YES";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		06CB67C35A91E16DBD17B949 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"B00CCDD09424E369308D67FA",
+				"1B104479E55E37CF8A63CBDF",
+			);
+			defaultConfigurationIsVisible = "0";
+			defaultConfigurationName = "Debug";
+		};
+		02271EA4D768E22916A3CD90 = {
+			isa = "PBXBuildFile";
+			fileRef = "6C8074905A8083E30E4D42C1";
+		};
+		B9BE09F6D23BFAB21F9F1979 = {
+			isa = "PBXBuildFile";
+			fileRef = "CF093F1C7D0CBA5C54FFF8E0";
+		};
+		33F02BE08C471CB394942C5A = {
+			isa = "PBXBuildFile";
+			fileRef = "C62C7D79827B8A2648810090";
+		};
+		5CAA62CA4CAB4AC3BD51A17A = {
+			isa = "PBXBuildFile";
+			fileRef = "F236A44BF4825B0D3AE02D77";
+		};
+		EE27B2BB9B6CBFFFEE095CA3 = {
+			isa = "PBXBuildFile";
+			fileRef = "DF64EB45F6C09C49C3382E19";
+		};
+		C1E0307E0F3E5359ABB07076 = {
+			isa = "PBXBuildFile";
+			fileRef = "2CC473744C2B663076F48C90";
+		};
+		E9F1CEEC357FB532E31733EB = {
+			isa = "PBXBuildFile";
+			fileRef = "E9F65604428AED374199F2F5";
+		};
+		2D46A32A409542FACF698BB3 = {
+			isa = "PBXBuildFile";
+			fileRef = "1CB3C43648425279F6BCE5B6";
+		};
+		9007D7F31B783AB06DAD2B40 = {
+			isa = "PBXBuildFile";
+			fileRef = "42F03B51957B6894AEAB9C5F";
+		};
+		761625707712524D4E5E07FB = {
+			isa = "PBXBuildFile";
+			fileRef = "B2692BA15AD618F1DC3C6C86";
+		};
+		F4468CB001B8292448AE7C78 = {
+			isa = "PBXBuildFile";
+			fileRef = "F5C411ED99C0769151E0EAA3";
+		};
+		C8D005075A4524258F4D4C1B = {
+			isa = "PBXBuildFile";
+			fileRef = "06BF0029FB042F4EB6F0DF03";
+		};
+		C3EE905C167A67DC4BEF1402 = {
+			isa = "PBXBuildFile";
+			fileRef = "25B48D85119A43605CDB1DAE";
+		};
+		9743A328AB1DB5300AAED1D9 = {
+			isa = "PBXBuildFile";
+			fileRef = "4219A3EEC2B150050A1C56BF";
+		};
+		0F89DD5CC0DFA7C6D8A09BD6 = {
+			isa = "PBXBuildFile";
+			fileRef = "E88A20D8961A9FC392DC7CA5";
+		};
+		B51299A280A01FF53CBD131C = {
+			isa = "PBXBuildFile";
+			fileRef = "C75EED9DB61C7E8D49ACE058";
+		};
+		7244B0689F72945E351AC576 = {
+			isa = "PBXBuildFile";
+			fileRef = "45F795B6D16ACFBE76FF238C";
+		};
+		910E352303E6DEC6DB65395C = {
+			isa = "PBXBuildFile";
+			fileRef = "D1A816F94668A9229103606C";
+		};
+		2ED92DF7AC8AD8D30DD0A105 = {
+			isa = "PBXBuildFile";
+			fileRef = "DBECCFA01C8FAD640DC822FA";
+		};
+		3CBC71A68F193747D1CF1598 = {
+			isa = "PBXBuildFile";
+			fileRef = "F4454F2C321585CAB5A59334";
+		};
+		FE30F4CA1B92F2FBC70E09D6 = {
+			isa = "PBXBuildFile";
+			fileRef = "9513145D0AE07BC037FD494D";
+		};
+		6BAB02B549A96CC50D0CA977 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = "2147483647";
+			files = (
+				"02271EA4D768E22916A3CD90",
+				"B9BE09F6D23BFAB21F9F1979",
+				"33F02BE08C471CB394942C5A",
+				"5CAA62CA4CAB4AC3BD51A17A",
+				"EE27B2BB9B6CBFFFEE095CA3",
+				"C1E0307E0F3E5359ABB07076",
+				"E9F1CEEC357FB532E31733EB",
+				"2D46A32A409542FACF698BB3",
+				"9007D7F31B783AB06DAD2B40",
+				"761625707712524D4E5E07FB",
+				"F4468CB001B8292448AE7C78",
+				"C8D005075A4524258F4D4C1B",
+				"C3EE905C167A67DC4BEF1402",
+				"9743A328AB1DB5300AAED1D9",
+				"0F89DD5CC0DFA7C6D8A09BD6",
+				"B51299A280A01FF53CBD131C",
+				"7244B0689F72945E351AC576",
+				"910E352303E6DEC6DB65395C",
+				"2ED92DF7AC8AD8D30DD0A105",
+				"3CBC71A68F193747D1CF1598",
+				"FE30F4CA1B92F2FBC70E09D6",
+			);
+			runOnlyForDeploymentPostprocessing = "0";
+		};
+		C1E9827DB735CA9BAA54A540 = {
+			isa = "PBXNativeTarget";
+			buildConfigurationList = "06CB67C35A91E16DBD17B949";
+			buildPhases = (
+				"6BAB02B549A96CC50D0CA977",
+				"F9187E824FE171A6F0EFAE28",
+				"6B3E090DB545F4D7E323DB6E",
+			);
+			buildRules = (
+			);
+			dependencies = (
+				"965FF32F58B180754D654307",
+			);
+			name = "RightClickHelper";
+			productName = "RightClickHelper";
+			productReference = "681C948D238C526E9E3424E0";
+			productType = "com.apple.product-type.application";
+		};
+		73EBF6644258C120893E685D = {
+			isa = "XCBuildConfiguration";
+			baseConfigurationReference = "6280E40656CCF01BD4D28240";
+			buildSettings = {
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+			};
+			name = "Debug";
+		};
+		0B0C687DF8B6B8DC790B519C = {
+			isa = "XCBuildConfiguration";
+			baseConfigurationReference = "6280E40656CCF01BD4D28240";
+			buildSettings = {
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = "Release";
+		};
+		76F8DEC3DFE0BDB465198890 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = (
+				"73EBF6644258C120893E685D",
+				"0B0C687DF8B6B8DC790B519C",
+			);
+			defaultConfigurationIsVisible = "0";
+			defaultConfigurationName = "Debug";
+		};
+		244210E48437B6556980A702 = {
+			isa = "PBXProject";
+			attributes = {
+				LastUpgradeCheck = "2630";
+				BuildIndependentTargetsInParallel = "YES";
+			};
+			buildConfigurationList = "76F8DEC3DFE0BDB465198890";
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			knownRegions = (
+				"zh-Hans",
+				"en",
+				"Base",
+			);
+			mainGroup = "19F479106CE8C3BA8C106518";
+			productRefGroup = "0A3E27B8CA818264D75C8D81";
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"C1E9827DB735CA9BAA54A540",
+				"A148AD5E0608DCE6158BFF07",
+			);
+		};
+	};
+	rootObject = "244210E48437B6556980A702";
+}

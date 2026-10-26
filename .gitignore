@@ -1,0 +1,23 @@
+.build/
+build/
+dist/
+.DS_Store
+Config/Local.xcconfig
+*.xcuserstate
+xcuserdata/
+.swiftpm/
+
+# Local verification artifacts may include paths, window contents and diagnostics.
+docs/evidence/*
+!docs/evidence/README.md
+
+# Credentials, signing exports and local Python environments.
+.env
+.env.*
+*.p12
+*.pfx
+*.mobileprovision
+*.provisionprofile
+.venv/
+__pycache__/
+*.pyc
