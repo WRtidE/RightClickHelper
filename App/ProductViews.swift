@@ -12,7 +12,7 @@ struct ContentView: View {
                     Text("让常用文件操作，就在右键里。 ").foregroundStyle(.secondary)
                 }
                 Spacer()
-                Text("0.7.1 · 本机测试版").font(.caption).padding(8).background(.quaternary, in: Capsule())
+                Text("0.7.2 · 本机测试版").font(.caption).padding(8).background(.quaternary, in: Capsule())
             }
             HStack {
                 Label(state.extensionEnabled ? "Finder 扩展已启用" : "Finder 扩展尚未启用",
@@ -70,7 +70,7 @@ private struct GuidePane: View {
                     step("复制路径", .copy)
                     step("新建文件", .create)
                 }
-                Text("依次选择“复制完整路径”和“新建文件”，再返回这里检查结果。只统计本次测试文件夹中的 Finder 操作。")
+                Text("先选择“复制完整路径”，再通过任一“新建”格式创建文件，再返回这里检查结果。只统计本次测试文件夹中的 Finder 操作。")
                     .font(.caption).foregroundStyle(.secondary)
                 if !state.guideActionsEnabled {
                     Button("启用引导所需的新建与复制动作") { state.enableGuideActions() }

@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/WRtidE/RightClickHelper/releases/download/v0.7.1/RightClickHelper-0.7.1-macOS-arm64.zip">
-    <img src="https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%20Mac%20%E5%AE%89%E8%A3%85%E5%8C%85-v0.7.1-0969DA?style=for-the-badge&amp;logo=apple&amp;logoColor=white" height="44" alt="立即下载 Mac 安装包 · v0.7.1">
+  <a href="https://github.com/WRtidE/RightClickHelper/releases/download/v0.7.2/RightClickHelper-0.7.2-macOS-arm64.zip">
+    <img src="https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%20Mac%20%E5%AE%89%E8%A3%85%E5%8C%85-v0.7.2-0969DA?style=for-the-badge&amp;logo=apple&amp;logoColor=white" height="44" alt="立即下载 Mac 安装包 · v0.7.2">
   </a>
 </p>
 <p align="center">
@@ -19,12 +19,12 @@
 <p align="center">
   <a href="#安装与启动"><img src="https://img.shields.io/badge/platform-macOS%2014%2B-475569?style=flat-square" alt="最低编译目标 macOS 14"></a>
   <a href="#功能一览"><img src="https://img.shields.io/badge/native-Swift%20%7C%20Finder%20Sync-007F73?style=flat-square" alt="原生 Swift 与 Finder Sync"></a>
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.7.1-2864A0?style=flat-square" alt="当前源码版本 0.7.1"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.7.2-2864A0?style=flat-square" alt="当前源码版本 0.7.2"></a>
   <a href="#版本与开发资料"><img src="https://img.shields.io/badge/status-local%20test-784BA0?style=flat-square" alt="本机测试版"></a>
 </p>
 
 <p align="center">
-  <strong><a href="https://github.com/WRtidE/RightClickHelper/releases/tag/v0.7.1">下载 Mac 测试版</a></strong> ·
+  <strong><a href="https://github.com/WRtidE/RightClickHelper/releases/tag/v0.7.2">下载 Mac 测试版</a></strong> ·
   <a href="#看看怎么用">功能截图</a> ·
   <a href="#安装与启动">安装与启动</a> ·
   <a href="#第一次新建文件">第一次新建文件</a> ·
@@ -39,11 +39,11 @@
 
 ## 看看怎么用
 
-以下为 **0.7.1 在 macOS 上的实际界面截图**，使用演示文件夹和示例文字，并裁去无关区域。不同 macOS 版本的菜单外观可能略有不同。
+以下为 macOS 实机截图。菜单展示 0.7.2 的布局，剪贴板卡片使用示例文字。
 
 ### ① 在文件夹空白处右键，找到「右键助手」
 
-展开菜单即可新建文件、复制路径，或选择 **在此打开 Git 终端**，直接进入当前文件夹。
+展开后，横线上方可直接选择要新建的格式。横线下方可以复制路径，或选择 **在此打开 Git 终端**，直接进入当前文件夹。
 
 <p align="center">
   <img src="docs/assets/finder-menu.png" width="480" alt="Finder 空白处右键展开右键助手，显示新建文件、复制路径、Git 终端和常用应用入口">
@@ -51,10 +51,10 @@
 
 ### ② 选择格式，新建 Word、PPT 或 Excel
 
-点击 **右键助手 → 新建文件 → 所需格式**，随后在小窗口中输入名称并创建。首次使用该目录时，按提示授权文件夹。
+直接选择 **右键助手 → 新建 Word 文档 (.docx)…** 等格式，随后在小窗口中输入名称并创建。首次使用该目录时，按提示授权文件夹。
 
 <p align="center">
-  <img src="docs/assets/new-file-menu.png" width="820" alt="新建文件子菜单：Word、PowerPoint、Excel、文本文件、Markdown 和 JSON">
+  <img src="docs/assets/new-file-menu.png" width="385" alt="右键助手菜单中直接列出的新建格式：Word、PowerPoint、Excel、文本文件、Markdown 和 JSON">
 </p>
 
 ### ③ 双击左 Shift，找回刚才复制的文字
@@ -82,13 +82,13 @@
 
 ## 安装与启动
 
-当前源码版本为 **0.7.1（build 23）**，使用 Apple Development 签名，当前不提供 Apple 公证版本。最低编译目标为 macOS 14，已有实机验证覆盖 macOS 26.5.2 / Apple Silicon，其他系统与芯片组合待验证。
+当前源码版本为 **0.7.2（build 24）**，使用 Apple Development 签名，当前不提供 Apple 公证版本。最低编译目标为 macOS 14，已有实机验证覆盖 macOS 26.5.2 / Apple Silicon，其他系统与芯片组合待验证。
 
 ### 下载应用包
 
 适用于 **Apple Silicon（M 系列芯片）Mac，macOS 14 或更高版本**；本次安装包不支持 Intel Mac。可在苹果菜单 → **关于本机** 查看芯片与系统版本。使用应用无需安装 Xcode。
 
-1. 打开 [v0.7.1 发布页](https://github.com/WRtidE/RightClickHelper/releases/tag/v0.7.1)，在 **Assets** 中下载 `RightClickHelper-0.7.1-macOS-arm64.zip`。不要下载 `Source code`，那是源码。
+1. 打开 [v0.7.2 发布页](https://github.com/WRtidE/RightClickHelper/releases/tag/v0.7.2)，在 **Assets** 中下载 `RightClickHelper-0.7.2-macOS-arm64.zip`。不要下载 `Source code`，那是源码。
 2. 双击 ZIP 解压，打开解压后的文件夹，找到 `RightClickHelper.app`。
 3. 将应用移入自己的应用程序文件夹：在 Finder 按 **⇧⌘H** 打开个人文件夹，进入 `Applications`（可能显示为“应用程序”）；没有该文件夹时可新建一个名为 `Applications` 的文件夹。
 4. 双击移入后的 `RightClickHelper.app`。如果系统阻止打开，按下一节操作。
@@ -144,7 +144,7 @@ bash scripts/install.sh
 
 ## 第一次新建文件
 
-1. 在桌面或文件夹空白处右键，选择 **右键助手 → 新建文件**。
+1. 在桌面或文件夹空白处右键，展开 **右键助手**。
 2. 选择需要的格式。首次操作该目录时，按提示选择并授权目标文件夹。
 3. 在小窗口中输入名称，点击 **创建**。
 4. Finder 会选中新文件，双击即可用关联的软件编辑。

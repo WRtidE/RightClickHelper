@@ -80,7 +80,6 @@ final class FinderSync: FIFinderSync {
         root.image?.isTemplate = true
         let actions = NSMenu()
         actions.autoenablesItems = false
-        // Finder renders separators as full-height empty rows on macOS 26.
         root.submenu = actions
         menu.addItem(root)
         let container = menuKind == .contextualMenuForContainer ? target : nil
@@ -103,11 +102,16 @@ final class FinderSync: FIFinderSync {
             switch action {
             case .create:
                 guard let directory = creationDirectory else { continue }
-                let templates = NSMenu()
+                if actions.numberOfItems > 0 { actions.addItem(templateDivider()) }
                 for template in preferences.templates {
-                    templates.addItem(requestItem(template.title + "…", request: ActionRequest(directoryPath: directory.path, template: template)))
+                    let request = ActionRequest(directoryPath: directory.path, template: template)
+                    let entry = requestItem("新建 " + template.title + "…", request: request)
+                    entry.image = item.image
+                    actions.addItem(entry)
                 }
-                item.submenu = templates
+                // The settings command always follows, even if every other action is hidden.
+                actions.addItem(templateDivider())
+                continue
             case .copyPath, .copyName, .copyShell:
                 let value: String
                 switch action {
@@ -142,6 +146,18 @@ final class FinderSync: FIFinderSync {
         store?.recordGuideStep(.menu, targets: urls)
         RequestTrace.duration("menu-build", since: started)
         return menu
+    }
+
+    private func templateDivider() -> NSMenuItem {
+        if #available(macOS 27, *) { return .separator() }
+        if #available(macOS 26, *) {
+            // Finder 26 proxies native separators as empty menu rows.
+            let divider = NSMenuItem(title: String(repeating: "─", count: 18), action: nil, keyEquivalent: "")
+            divider.isEnabled = false
+            divider.setAccessibilityLabel("分隔线")
+            return divider
+        }
+        return .separator()
     }
 
     private func requestItem(_ title: String, request: ActionRequest) -> NSMenuItem {

@@ -78,7 +78,7 @@ resource_phase = obj("app-resources", "PBXResourcesBuildPhase", buildActionMask=
 common = {"SDKROOT": "macosx", "MACOSX_DEPLOYMENT_TARGET": "14.0", "SWIFT_VERSION": "5.0",
           "CLANG_ENABLE_MODULES": "YES", "CODE_SIGN_STYLE": "Manual", "CODE_SIGN_IDENTITY": "Apple Development",
           "ENABLE_HARDENED_RUNTIME": "YES", "CODE_SIGN_INJECT_BASE_ENTITLEMENTS": "NO",
-          "GENERATE_INFOPLIST_FILE": "NO", "CURRENT_PROJECT_VERSION": "23", "MARKETING_VERSION": "0.7.1"}
+          "GENERATE_INFOPLIST_FILE": "NO", "CURRENT_PROJECT_VERSION": "24", "MARKETING_VERSION": "0.7.2"}
 ext_settings = dict(common, PRODUCT_NAME="FinderExtension", PRODUCT_BUNDLE_IDENTIFIER="dev.rightclickhelper.prototype.FinderExtension",
                     INFOPLIST_FILE="Config/Extension-Info.plist", CODE_SIGN_ENTITLEMENTS="Config/Extension.entitlements",
                     APPLICATION_EXTENSION_API_ONLY="YES", SKIP_INSTALL="YES", LD_RUNPATH_SEARCH_PATHS="$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks")
