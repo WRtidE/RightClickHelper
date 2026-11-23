@@ -25,6 +25,7 @@
 
 <p align="center">
   <strong><a href="https://github.com/WRtidE/RightClickHelper/releases/tag/v0.7.1">下载 Mac 测试版</a></strong> ·
+  <a href="#看看怎么用">功能截图</a> ·
   <a href="#安装与启动">安装与启动</a> ·
   <a href="#第一次新建文件">第一次新建文件</a> ·
   <a href="#在项目里打开-git-终端">Git 终端</a> ·
@@ -35,6 +36,36 @@
 在桌面或 Finder 文件夹里点一下右键，就能新建 Word、PPT、Excel，复制路径，或在当前目录打开终端。复制过的文字也能通过双击左 Shift 找回来，选中记录后可粘贴到正在使用的应用。
 
 右键助手在本机处理文件与文本历史。新建时只显示文件名小窗口，主应用以后台模式运行，设置可通过右键菜单里的 **打开右键助手…** 进入。
+
+## 看看怎么用
+
+以下为 **0.7.1 在 macOS 上的实际界面截图**，使用演示文件夹和示例文字，并裁去无关区域。不同 macOS 版本的菜单外观可能略有不同。
+
+### ① 在文件夹空白处右键，找到「右键助手」
+
+展开菜单即可新建文件、复制路径，或选择 **在此打开 Git 终端**，直接进入当前文件夹。
+
+<p align="center">
+  <img src="docs/assets/finder-menu.png" width="480" alt="Finder 空白处右键展开右键助手，显示新建文件、复制路径、Git 终端和常用应用入口">
+</p>
+
+### ② 选择格式，新建 Word、PPT 或 Excel
+
+点击 **右键助手 → 新建文件 → 所需格式**，随后在小窗口中输入名称并创建。首次使用该目录时，按提示授权文件夹。
+
+<p align="center">
+  <img src="docs/assets/new-file-menu.png" width="820" alt="新建文件子菜单：Word、PowerPoint、Excel、文本文件、Markdown 和 JSON">
+</p>
+
+### ③ 双击左 Shift，找回刚才复制的文字
+
+先在 **剪贴板** 设置中启用文本历史并完成权限设置。复制文字后，快速按两次 **左 Shift**，鼠标附近就会出现历史卡片。点击记录后可用 **⌘V** 粘贴；开启并授权 **自动粘贴回原应用** 后，点击记录即可直接粘贴。按 **Esc** 关闭卡片。
+
+<p align="center">
+  <img src="docs/assets/clipboard-history.png" width="354" alt="文本历史紧凑卡片，展示三条示例文字及复制时间，点击即可选用记录">
+</p>
+
+详细操作见[第一次新建文件](#第一次新建文件)和[文本历史使用说明](#双击左-shift找回复制过的文字)。
 
 ## 功能一览
 
