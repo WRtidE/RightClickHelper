@@ -1,4 +1,14 @@
 <p align="center">
+  <a href="https://github.com/WRtidE/RightClickHelper/releases/download/v0.7.1/RightClickHelper-0.7.1-macOS-arm64.zip">
+    <img src="https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%20Mac%20%E5%AE%89%E8%A3%85%E5%8C%85-v0.7.1-0969DA?style=for-the-badge&amp;logo=apple&amp;logoColor=white" height="44" alt="立即下载 Mac 安装包 · v0.7.1">
+  </a>
+</p>
+<p align="center">
+  适用于 M 系列 Mac · macOS 14+ · 点击直接下载 ZIP<br>
+  <a href="#首次打开被-macos-拦截怎么办">首次打开被拦截？查看安装步骤</a>
+</p>
+
+<p align="center">
   <img src="docs/assets/rightclickhelper-icon.png" width="200" height="200" alt="右键助手的鼠标指针与点击光环图标">
 </p>
 
