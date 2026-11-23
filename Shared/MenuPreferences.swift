@@ -9,7 +9,7 @@ enum MenuAction: String, Codable, CaseIterable, Identifiable {
         case .copyPath: return "复制完整路径"
         case .copyName: return "复制文件名"
         case .copyShell: return "复制终端转义路径"
-        case .terminal: return "在此打开终端"
+        case .terminal: return "在此打开 Git 终端"
         case .applications: return "用常用应用打开"
         }
     }

@@ -130,6 +130,7 @@ extension AppState {
         guard !isPresentingAction, window?.attachedSheet == nil, NSApp.modalWindow == nil, inbox?.activeID == nil else {
             message = "当前还有操作正在处理，请稍后重试服务。"; return
         }
+        hideSettingsForExternalAction()
         do {
             try ServiceSelection.validate([target], action: action)
             let directory = try ActionContext.terminalDirectory(for: [target])

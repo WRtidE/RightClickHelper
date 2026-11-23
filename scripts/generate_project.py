@@ -47,6 +47,7 @@ for extension in ("docx", "pptx", "xlsx"):
     relative = f"Shared/Resources/blank.{extension}"
     resource_refs.append(obj(relative, "PBXFileReference", lastKnownFileType="file", path=relative, sourceTree="SOURCE_ROOT"))
 resource_refs.append(obj("ThirdPartyNotices.txt", "PBXFileReference", lastKnownFileType="text", path="ThirdPartyNotices.txt", sourceTree="SOURCE_ROOT"))
+resource_refs.append(obj("App/Resources/AppIcon.icns", "PBXFileReference", lastKnownFileType="image.icns", path="App/Resources/AppIcon.icns", sourceTree="SOURCE_ROOT"))
 resources = obj("resources-group", "PBXGroup", name="Resources", children=resource_refs, sourceTree="<group>")
 main_group = obj("main-group", "PBXGroup", children=groups + [resources, base, products], sourceTree="<group>")
 
@@ -77,7 +78,7 @@ resource_phase = obj("app-resources", "PBXResourcesBuildPhase", buildActionMask=
 common = {"SDKROOT": "macosx", "MACOSX_DEPLOYMENT_TARGET": "14.0", "SWIFT_VERSION": "5.0",
           "CLANG_ENABLE_MODULES": "YES", "CODE_SIGN_STYLE": "Manual", "CODE_SIGN_IDENTITY": "Apple Development",
           "ENABLE_HARDENED_RUNTIME": "YES", "CODE_SIGN_INJECT_BASE_ENTITLEMENTS": "NO",
-          "GENERATE_INFOPLIST_FILE": "NO", "CURRENT_PROJECT_VERSION": "18", "MARKETING_VERSION": "0.6.0"}
+          "GENERATE_INFOPLIST_FILE": "NO", "CURRENT_PROJECT_VERSION": "23", "MARKETING_VERSION": "0.7.1"}
 ext_settings = dict(common, PRODUCT_NAME="FinderExtension", PRODUCT_BUNDLE_IDENTIFIER="dev.rightclickhelper.prototype.FinderExtension",
                     INFOPLIST_FILE="Config/Extension-Info.plist", CODE_SIGN_ENTITLEMENTS="Config/Extension.entitlements",
                     APPLICATION_EXTENSION_API_ONLY="YES", SKIP_INSTALL="YES", LD_RUNPATH_SEARCH_PATHS="$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks")
@@ -119,7 +120,7 @@ info = dict(CFBundleDevelopmentRegion="zh_CN", CFBundleExecutable="$(EXECUTABLE_
             CFBundleVersion="$(CURRENT_PROJECT_VERSION)", LSMinimumSystemVersion="$(MACOSX_DEPLOYMENT_TARGET)",
             SharedGroupIdentifier="$(DEVELOPMENT_TEAM).dev.rightclickhelper.prototype")
 app_info = dict(info, CFBundlePackageType="APPL", CFBundleDisplayName="右键助手", NSPrincipalClass="NSApplication",
-                NSHighResolutionCapable=True, CFBundleURLTypes=[dict(CFBundleURLName="dev.rightclickhelper.prototype.request",
+                CFBundleIconFile="AppIcon", LSUIElement=True, NSHighResolutionCapable=True, CFBundleURLTypes=[dict(CFBundleURLName="dev.rightclickhelper.prototype.request",
                 CFBundleURLSchemes=["rightclickhelper-prototype"], CFBundleTypeRole="Editor")])
 # The four services receive selected filesystem objects, never arbitrary text.
 app_info["NSServices"] = [

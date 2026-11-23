@@ -57,6 +57,7 @@ final class AppState: ObservableObject {
 
     func showWindow() {
         guard let window else { return }
+        RequestTrace.event("settings-present")
         if window.contentView?.identifier?.rawValue != "settings-content" {
             let content = NSHostingView(rootView: ContentView(state: self)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading))
@@ -65,6 +66,13 @@ final class AppState: ObservableObject {
         }
         window.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
+    }
+
+    func hideSettingsForExternalAction() {
+        // A visible settings window can otherwise be raised by activation/key-window
+        // changes, even though the action itself uses a nonactivating panel.
+        if window?.isVisible == true { RequestTrace.event("settings-hidden-for-action") }
+        window?.orderOut(nil)
     }
 
     func initialize() {
@@ -241,6 +249,7 @@ final class AppState: ObservableObject {
     }
 
     private func execute(_ request: ActionRequest, completion: @escaping RequestInbox.Completion) {
+        if request.origin != .app { hideSettingsForExternalAction() }
         reconcileDirectories()
         let target = URL(fileURLWithPath: request.directoryPath)
         let hasGrant = grants.contains {

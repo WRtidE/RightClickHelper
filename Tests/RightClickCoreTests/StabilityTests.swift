@@ -2,6 +2,22 @@ import XCTest
 @testable import RightClickCore
 
 final class StabilityTests: XCTestCase {
+    func testReopenDoesNotShowSettingsDuringExternalActionLifecycle() {
+        // The queue watcher can claim a request before Launch Services delivers reopen.
+        let stages = [(pending: true, active: false, dialog: false),
+                      (pending: false, active: true, dialog: false),
+                      (pending: false, active: true, dialog: true),
+                      (pending: false, active: false, dialog: true)]
+        for stage in stages {
+            XCTAssertFalse(LaunchPresentation.shouldShowSettingsOnReopen(
+                hasPendingRequests: stage.pending, hasActiveRequest: stage.active,
+                hasActionDialog: stage.dialog))
+        }
+        // Once the action finishes, a deliberate Dock reopen must still work.
+        XCTAssertTrue(LaunchPresentation.shouldShowSettingsOnReopen(
+            hasPendingRequests: false, hasActiveRequest: false, hasActionDialog: false))
+    }
+
     func testLaunchPresentationDistinguishesLoginFinderAndExplicitLaunch() {
         for isDefault in [false, true] {
             for login in [false, true] {

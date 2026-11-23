@@ -42,9 +42,20 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool { false }
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         prepareWindow()
-        AppState.shared.showWindow()
-        AppState.shared.activate()
-        return true
+        let state = AppState.shared
+        // Launch Services may send reopen while waking the app for a Finder action.
+        // The inbox may already have claimed the request before this callback runs.
+        let pending = (try? state.store?.pendingIDs()) ?? []
+        if LaunchPresentation.shouldShowSettingsOnReopen(hasPendingRequests: !pending.isEmpty,
+                                                         hasActiveRequest: state.inbox?.activeID != nil,
+                                                         hasActionDialog: state.isPresentingAction) {
+            state.showWindow()
+        } else {
+            RequestTrace.event("reopen-settings-suppressed")
+        }
+        state.activate()
+        // All presentation is handled above. Do not let AppKit reorder old windows.
+        return false
     }
 
     func windowShouldClose(_ sender: NSWindow) -> Bool {
@@ -104,7 +115,9 @@ enum RightClickHelperApp {
         let application = NSApplication.shared
         let delegate = AppDelegate()
         application.delegate = delegate
-        application.setActivationPolicy(.regular)
+        // Remain an agent even when an action or settings window becomes key.
+        // LSUIElement also prevents a transient Dock icon before main() runs.
+        application.setActivationPolicy(.accessory)
         withExtendedLifetime(delegate) { application.run() }
     }
 }

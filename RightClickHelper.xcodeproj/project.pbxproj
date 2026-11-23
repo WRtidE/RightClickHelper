@@ -231,6 +231,12 @@
 			path = "ThirdPartyNotices.txt";
 			sourceTree = "SOURCE_ROOT";
 		};
+		D024129977B3EF3C51855462 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "image.icns";
+			path = "App/Resources/AppIcon.icns";
+			sourceTree = "SOURCE_ROOT";
+		};
 		C5E55183ECB076EB335DF6EE = {
 			isa = "PBXGroup";
 			name = "Resources";
@@ -239,6 +245,7 @@
 				"8FAA48BC59C6F8F151C616F4",
 				"A337CF8E43190705542848DE",
 				"39B094970D276CB11C8BF4CD",
+				"D024129977B3EF3C51855462",
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +277,10 @@
 			isa = "PBXBuildFile";
 			fileRef = "39B094970D276CB11C8BF4CD";
 		};
+		C29C39EA5452EEF9DDF10853 = {
+			isa = "PBXBuildFile";
+			fileRef = "D024129977B3EF3C51855462";
+		};
 		F9187E824FE171A6F0EFAE28 = {
 			isa = "PBXResourcesBuildPhase";
 			buildActionMask = "2147483647";
@@ -278,6 +289,7 @@
 				"2D3134283BF47795686D7FAD",
 				"7A97A4A7A252D6805EA19CA1",
 				"C93051F88CAFAAF6477266C5",
+				"C29C39EA5452EEF9DDF10853",
 			);
 			runOnlyForDeploymentPostprocessing = "0";
 		};
@@ -294,8 +306,8 @@
 				ENABLE_HARDENED_RUNTIME = "YES";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = "NO";
 				GENERATE_INFOPLIST_FILE = "NO";
-				CURRENT_PROJECT_VERSION = "18";
-				MARKETING_VERSION = "0.6.0";
+				CURRENT_PROJECT_VERSION = "23";
+				MARKETING_VERSION = "0.7.1";
 				PRODUCT_NAME = "FinderExtension";
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.rightclickhelper.prototype.FinderExtension";
 				INFOPLIST_FILE = "Config/Extension-Info.plist";
@@ -321,8 +333,8 @@
 				ENABLE_HARDENED_RUNTIME = "YES";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = "NO";
 				GENERATE_INFOPLIST_FILE = "NO";
-				CURRENT_PROJECT_VERSION = "18";
-				MARKETING_VERSION = "0.6.0";
+				CURRENT_PROJECT_VERSION = "23";
+				MARKETING_VERSION = "0.7.1";
 				PRODUCT_NAME = "FinderExtension";
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.rightclickhelper.prototype.FinderExtension";
 				INFOPLIST_FILE = "Config/Extension-Info.plist";
@@ -471,8 +483,8 @@
 				ENABLE_HARDENED_RUNTIME = "YES";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = "NO";
 				GENERATE_INFOPLIST_FILE = "NO";
-				CURRENT_PROJECT_VERSION = "18";
-				MARKETING_VERSION = "0.6.0";
+				CURRENT_PROJECT_VERSION = "23";
+				MARKETING_VERSION = "0.7.1";
 				PRODUCT_NAME = "RightClickHelper";
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.rightclickhelper.prototype";
 				INFOPLIST_FILE = "Config/App-Info.plist";
@@ -497,8 +509,8 @@
 				ENABLE_HARDENED_RUNTIME = "YES";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = "NO";
 				GENERATE_INFOPLIST_FILE = "NO";
-				CURRENT_PROJECT_VERSION = "18";
-				MARKETING_VERSION = "0.6.0";
+				CURRENT_PROJECT_VERSION = "23";
+				MARKETING_VERSION = "0.7.1";
 				PRODUCT_NAME = "RightClickHelper";
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.rightclickhelper.prototype";
 				INFOPLIST_FILE = "Config/App-Info.plist";
