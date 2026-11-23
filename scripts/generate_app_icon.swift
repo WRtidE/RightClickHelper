@@ -1,6 +1,6 @@
 import AppKit
 
-// Generate the app icon from the same system symbol used by the Finder menu.
+// Generate app and README icons from the same system symbol used by the Finder menu.
 let project = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
 let iconset = project.appendingPathComponent("build/AppIcon.iconset")
 try FileManager.default.createDirectory(at: iconset, withIntermediateDirectories: true)
@@ -15,7 +15,7 @@ let blue = NSColor(calibratedRed: 0.04, green: 0.49, blue: 0.98, alpha: 1)
 let symbol = NSImage(systemSymbolName: "cursorarrow.click.2", accessibilityDescription: nil)!
     .withSymbolConfiguration(NSImage.SymbolConfiguration(pointSize: 600, weight: .regular))!
 
-for (name, pixels) in sizes {
+func renderIcon(pixels: Int, includeTile: Bool) -> Data {
     let bitmap = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: pixels, pixelsHigh: pixels,
         bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false,
         colorSpaceName: .deviceRGB, bytesPerRow: 0, bitsPerPixel: 0)!
@@ -26,12 +26,15 @@ for (name, pixels) in sizes {
     transform.scale(by: scale)
     transform.concat()
 
-    let tile = NSBezierPath(roundedRect: NSRect(x: 62, y: 62, width: 900, height: 900),
-                            xRadius: 202, yRadius: 202)
-    NSGradient(starting: .white, ending: NSColor(calibratedRed: 0.91, green: 0.96, blue: 1, alpha: 1))!
-        .draw(in: tile, angle: -90)
+    if includeTile {
+        let tile = NSBezierPath(roundedRect: NSRect(x: 62, y: 62, width: 900, height: 900),
+                                xRadius: 202, yRadius: 202)
+        NSGradient(starting: .white, ending: NSColor(calibratedRed: 0.91, green: 0.96, blue: 1, alpha: 1))!
+            .draw(in: tile, angle: -90)
+    }
     let symbolSize = symbol.size
-    let width: CGFloat = 600
+    // Both exports preserve the symbol's intrinsic aspect ratio.
+    let width: CGFloat = includeTile ? 600 : 720
     let height = width * symbolSize.height / symbolSize.width
     let tinted = NSImage(size: symbolSize, flipped: false) { rect in
         symbol.draw(in: rect)
@@ -42,9 +45,18 @@ for (name, pixels) in sizes {
     tinted.draw(in: NSRect(x: (1024 - width) / 2, y: (1024 - height) / 2,
                            width: width, height: height))
     NSGraphicsContext.restoreGraphicsState()
-    try bitmap.representation(using: .png, properties: [:])!
+    return bitmap.representation(using: .png, properties: [:])!
+}
+
+for (name, pixels) in sizes {
+    try renderIcon(pixels: pixels, includeTile: true)
         .write(to: iconset.appendingPathComponent(name + ".png"))
 }
+
+let documentationAssets = project.appendingPathComponent("docs/assets")
+try FileManager.default.createDirectory(at: documentationAssets, withIntermediateDirectories: true)
+try renderIcon(pixels: 512, includeTile: false)
+    .write(to: documentationAssets.appendingPathComponent("rightclickhelper-icon.png"))
 
 let resources = project.appendingPathComponent("App/Resources")
 try FileManager.default.createDirectory(at: resources, withIntermediateDirectories: true)
